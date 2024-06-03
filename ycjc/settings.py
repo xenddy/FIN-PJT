@@ -25,11 +25,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = config.DJANGO_SECRET_KEY
-OPENAI_API_KEY = config.OPENAI_API_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "3.38.255.1",
+    "localhost",
+    "127.0.0.1",
+]
 
 
 # Application definition

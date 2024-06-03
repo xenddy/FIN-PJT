@@ -23,7 +23,9 @@ class Migration(migrations.Migration):
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),
-        migrations.CreateModel(
+    ]
+
+    migrations.CreateModel(
             name='Comment',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
@@ -36,7 +38,8 @@ class Migration(migrations.Migration):
                 ('updated_at', models.DateTimeField(auto_now=True)),
             ],
         ),
-        migrations.CreateModel(
+
+    migrations.CreateModel(
             name='Like',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
@@ -47,6 +50,4 @@ class Migration(migrations.Migration):
             options={
                 'unique_together': {('user', 'article')},
             },
-            ],
-        ),
-    ]
+        )
